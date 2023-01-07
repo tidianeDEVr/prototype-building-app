@@ -1,0 +1,45 @@
+:host {
+    .onboard-main{
+        padding: 5%;
+        height: 100%;
+        .onboard-top {
+            ion-toolbar {
+                background-color: transparent !important;
+            }
+            margin-top: 5%;
+            ion-button { 
+                font-family: fr;
+                font-size: .9rem;
+            }
+        }
+        .onboard-bot {
+            ion-slides {
+                padding-bottom: 22%;
+            }
+            .onboard-card-img {
+                margin: 9% 0 8%;
+                img {
+                    height: 250px;
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+            .onboard-card-desc {
+                h4 {
+                    font-size: 1.2rem;
+                    margin-bottom: 4%;
+                    font-family: 'fb';
+                }
+                p {
+                    font-size: .85rem;
+                    padding: 2% 5%;
+                }
+            }
+        }
+        .start-btn {
+            width: 100%;
+            font-family: fb;
+            transition: all ease-in-out .3s;
+        }
+    }
+}

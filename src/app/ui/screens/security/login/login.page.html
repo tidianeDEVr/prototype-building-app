@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="login-main">
+    <ion-toolbar translucent>
+      <ion-buttons slot="start">
+        <ion-button color="primary" (click)="goBack()">
+          <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-content fullscreen>
+      <div class="img-container">
+        <img src="assets/images/identity.png" alt="image">
+      </div>
+      <div class="forms">
+        <h4>Identifiants</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Identifiant</ion-label>
+          <ion-input placeholder="Entrez votre identifiant" [email]="true" [clearInput]="true" [(ngModel)]="identifier"></ion-input>
+          <ion-note slot="helper">Entrez l'adresse email fourni</ion-note>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Mot de passe</ion-label>
+          <ion-input type="password" placeholder="Entrez votre mot de passe" [clearOnEdit]="true"  [(ngModel)]="password"></ion-input>
+          <ion-note slot="helper">Entrez le mot de passe du compte</ion-note>
+        </ion-item>
+        <ion-button (click)="login()">
+          SOUMETTRE
+        </ion-button>
+      </div>
+    </ion-content>
+  </div>
+</ion-content>

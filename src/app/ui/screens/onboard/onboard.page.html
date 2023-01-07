@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="onboard-main">
+    <div class="onboard-top">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button color="primary" (click)="goBack()">
+            <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button color="dark" (click)="skip()" fill="clear">
+            Skip
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+    <div class="onboard-bot">
+      <ion-slides pager="true" [options]="slidersOpts">
+        <ion-slide *ngFor="let slide of onboardSlides">
+          <div class="onboard-card">
+            <div class="onboard-card-img">
+              <img src="assets/images/{{slide.image}}" alt="management">
+            </div>
+            <div class="onboard-card-desc ion-text-center">
+              <h4 class="ion-text-capitalizer ion-no-margin">{{slide.title}}</h4>
+              <p class="ion-no-margin">
+                {{slide.description}}
+              </p>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <ion-button class="start-btn" (click)="skip()">
+      J'accede
+    </ion-button>
+  </div>
+</ion-content>
